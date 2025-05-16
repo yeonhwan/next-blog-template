@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* dark mode from next-theme */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* minimal styling for init */
+/* you can extend it with your own customization */
+
+@theme {
+  /* Fonts */
+  --font-myfont: var(--my-font);
+
+  /* Palette */
+  --color-priamry-100: #000000;
+  --color-priamry-200: #000000;
+  --color-priamry-300: #000000;
+  --color-priamry-400: #000000;
+  --color-priamry-500: #000000;
+  --color-priamry-600: #000000;
+  --color-priamry-700: #000000;
+  --color-priamry-800: #000000;
+
+  /* Typogrpahy (1rem === 16px) */
+
+  /* Breakpoint (min-width) */
+  --breakpoint-desktop: 1920px;
+  --breakpoint-laptop: 1023px;
+  --breakpoint-tablet: 680px;
+}

@@ -1,0 +1,84 @@
+/*
+ For additional rehype styling
+ You can style individual elements within its component
+*/
+
+/*
+  Nested list styling 
+  If you don't need nested styling, delete styling below
+ */
+.md-list-depth {
+  &[data-info="1-ul"] {
+    &::before {
+      content: "•";
+    }
+  }
+
+  &[data-info="2-ul"] {
+    &::before {
+      content: "■";
+    }
+  }
+
+  &[data-info="3-ul"] {
+    &::before {
+      content: "▢";
+    }
+  }
+
+  &[data-info="1-ol"] {
+    list-style-type: decimal;
+    list-style-position: inside;
+    &::marker {
+      padding-left: 1em;
+    }
+  }
+
+  &[data-info="2-ol"] {
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+  }
+
+  &[data-info="3-ol"] {
+    list-style-type: lower-roman;
+    list-style-position: inside;
+  }
+}
+
+/* inline-code-block */
+code:not(pre code) {
+  background-color: rgba(123, 123, 123, 0.2);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  display: inline;
+}
+
+/* 
+ For mulitple themes style setting for Shiki code highlighting
+ If you use single code theme, you can delete styling below
+ */
+
+[data-theme="light"] {
+  pre[data-theme*="github-light"],
+  code[data-theme*="github-light"] {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
+  }
+
+  code[data-theme*="github-light"] span {
+    color: var(--shiki-light);
+  }
+}
+
+[data-theme="dark"] {
+  figcaption[data-rehype-pretty-code-title=""],
+  pre[data-theme*="material-theme-darker"],
+  code[data-theme*="material-theme-darker"] {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+
+  code[data-theme*="material-theme-darker"] span {
+    color: var(--shiki-dark);
+  }
+}
